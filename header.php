@@ -45,6 +45,14 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<div class="os-logo">
+			<a href="#">
+				<img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt="">
+			</a>
+		</div>
+
+		<?php 
+		/*
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wordcamp2025' ); ?></button>
 			<?php
@@ -55,5 +63,8 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>
+		*/ 
+		?>
+		<!-- #site-navigation -->
 	</header><!-- #masthead -->

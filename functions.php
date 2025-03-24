@@ -138,6 +138,14 @@ add_action( 'widgets_init', 'wordcamp2025_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wordcamp2025_scripts() {
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.3.2' );
+	wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '5.3.2' );
+
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '5.3.2', true );
+	wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '5.3.2', true );
+
+	wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js', array(), '5.3.2', true );
+
 	wp_enqueue_style( 'wordcamp2025-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'wordcamp2025-style', 'rtl', 'replace' );
 
