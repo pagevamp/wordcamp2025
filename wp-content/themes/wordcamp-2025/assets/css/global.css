@@ -118,6 +118,7 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: #0000;
 }
 
 button:hover {
@@ -156,7 +157,9 @@ button:hover {
 .u-pt-3xl {
   padding-top: clamp(4rem, 3.26rem + 3.75vw, 9rem) !important;
 }
-
+.u-pointer-none {
+  pointer-events: none !important;
+}
 .l-container {
   margin-left: auto;
   margin-right: auto;
