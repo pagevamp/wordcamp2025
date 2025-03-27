@@ -31,7 +31,7 @@ const formInput = () => {
     const input = formGroup.querySelector("input, textarea, select"); // Find the input, textarea, or select element
     const label = formGroup.querySelector("label"); // Find the label element
     input.parentNode.insertBefore(label, input.nextSibling); // Move the label inside the input's parent (the span)
-    input.setAttribute('autocomplete', 'off');
+    input.setAttribute("autocomplete", "off");
   });
 };
 
@@ -184,14 +184,15 @@ header = () => {
 
       switch (btnType) {
         case "msg":
-          html.querySelector(".header__contact-form form").reset();
-          html
-            .querySelector(".header__contact-form form")
-            .classList.remove("spam", "sent");
-          html
-            .querySelector(".header__contact-form form")
-            .setAttribute("data-status", "init");
-
+          if (html.querySelector(".header__contact-form form")) {
+            html.querySelector(".header__contact-form form").reset();
+            html
+              .querySelector(".header__contact-form form")
+              .classList.remove("spam", "sent");
+            html
+              .querySelector(".header__contact-form form")
+              .setAttribute("data-status", "init");
+          }
           html.classList.remove(
             menu.contact.list.active,
             menu.contact.form.hide
