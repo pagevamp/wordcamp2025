@@ -24,43 +24,43 @@
 
 			<div class="l-row u-py-2xl u-py-lg-3xl">
 				<div class="l-col-6 l-col-offset-lg-4 l-col-lg-3">
-					<ul class="u-list-style-none u-d-flex u-flex-column u-gy-2xs p1">
+					<ul class="site-footer__link">
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Home" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Home" aria-label="Home" type="link" tabindex="1" href="#">
 								Home
 							</a>
 						</li>
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Projects" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Projects" aria-label="Projects" type="link" tabindex="1" href="#">
 								Projects
 							</a>
 						</li>
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Services" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Services" aria-label="Services" type="link" tabindex="1" href="#">
 								Services
 							</a>
 						</li>
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Approach" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Approach" aria-label="Approach" type="link" tabindex="1" href="#">
 								Approach
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="l-col-6 l-col-lg-4">
-					<ul class="u-list-style-none u-d-flex u-flex-column u-gy-2xs p1">
+					<ul class="site-footer__link">
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Company" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Company" aria-label="Company" type="link" tabindex="1" href="#">
 								Company
 							</a>
 						</li>
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Philosophy" target="" rel="" type="link" tabindex="1" href="#">
+							<a title="Philosophy" aria-label="Philosophy" type="link" tabindex="1" href="#">
 								Philosophy
 							</a>
 						</li>
 						<li>
-							<a class="c-text-link c-text-link--no-border" title="Opportunities" target="_blank" rel="" type="link" tabindex="1" href="#">
+							<a title="Opportunities" aria-label="Opportunities" type="link" tabindex="1" href="#">
 								Opportunities
 							</a>
 						</li>
@@ -69,18 +69,18 @@
 			</div>
 			<div class="l-row u-py-2xl u-py-lg-3xl">
 				<div class="l-col-offset-lg-4 l-col-lg-8">
-					<div class="u-d-flex u-flex-column u-gy-2xs">
-						<div class="u-d-flex u-justify-between h1">
-							<span>Kathmandu</span><span class="timezone" id="Asia/Kathmandu">17:17</span>
+					<div class="site-footer__destination">
+						<div class="site-footer__destination-title">
+							<span>Kathmandu</span><span class="timezone" id="Asia/Kathmandu">13:15</span>
 						</div>
-						<div class="u-d-flex u-justify-between h1">
-							<span>Milan</span><span class="timezone" id="Europe/Amsterdam">12:32</span>
+						<div class="site-footer__destination-title">
+							<span>Milan</span><span class="timezone" id="Europe/Amsterdam">08:30</span>
 						</div>
-						<div class="u-d-flex u-justify-between h1">
-							<span>Belfast</span><span class="timezone" id="Europe/Belfast">11:32</span>
+						<div class="site-footer__destination-title">
+							<span>Belfast</span><span class="timezone" id="Europe/Belfast">07:30</span>
 						</div>
-						<div class="u-d-flex u-justify-between h1">
-							<span>New York</span><span class="timezone" id="America/New_York">07:32</span>
+						<div class="site-footer__destination-title">
+							<span>New York</span><span class="timezone" id="America/New_York">03:30</span>
 						</div>
 					</div>
 				</div>
