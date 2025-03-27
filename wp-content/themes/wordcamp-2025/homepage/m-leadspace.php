@@ -12,7 +12,7 @@
                         <figure class="m-leadspace__video-figure lazy-content-hidden" animation="img-intro">
                             <div>
                                 <video id="" playsinline="" loop="" autoplay="" muted="" poster="" data-src="" class="m-leadspace__video-player" width="" height="">
-                                    <source id="mp4" src="<?php echo get_template_directory_uri() . '/assets/video/Showreel_LQ.mp4' ?>" type="video/mp4">
+                                    <source id="mp4" src="https://wordcamp2025e.wpenginepowered.com/wp-content/uploads/2025/03/Showreel_LQ.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </figure>
