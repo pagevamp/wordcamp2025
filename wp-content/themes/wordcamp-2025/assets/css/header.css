@@ -1,0 +1,82 @@
+.header {
+  bottom: calc(clamp(1rem, -0.19rem + 6vw, 9rem) * 1 / 2);
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+.header:before,
+.header__overlay {
+  bottom: calc(clamp(1rem, -0.19rem + 6vw, 9rem) * -1 * 1 / 2);
+  cursor: none;
+  height: 100dvh;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -10;
+}
+.header:before {
+  background-color: var(--main-text);
+  content: "";
+  opacity: 0;
+  transition: 1.2s opacity var(--transition-ease-in-out);
+}
+.header__container {
+  margin-left: calc(clamp(1rem, -0.19rem + 6vw, 9rem) * -1 * 1 / 2);
+  margin-right: calc(clamp(1rem, -0.19rem + 6vw, 9rem) * -1 * 1 / 2);
+  pointer-events: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #fff;
+  border-radius: 0.25rem;
+}
+
+.header__menu {
+  height: calc(
+    clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem) * 2 +
+      clamp(1.2rem, 1.08rem + 0.6vw, 2rem)
+  );
+  pointer-events: all;
+  padding: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header__logo {
+  transform: scale(1.5);
+  transform-origin: left center;
+}
+.header__logo span {
+  color: var(--main-clr);
+  display: block;
+  font-size: clamp(1.2rem, 1.08rem + 0.6vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.header__btns {
+  display: flex;
+  padding-left: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+}
+
+.header__contact-btn,
+.header__menu-btn {
+  width: clamp(5.25rem, 2rem + 4vw, 7.5rem);
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.header__menu-btn {
+  color: var(--main-text);
+}
+.header__contact-btn {
+  background-color: var(--main-text);
+  border-radius: 1.75rem;
+  color: var(--main-bg);
+  padding-bottom: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  padding-top: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+}
