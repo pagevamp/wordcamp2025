@@ -32,3 +32,33 @@
   right: 0;
   width: 100%;
 }
+.site-footer__btn:hover {
+  --main-clr: #fff;
+}
+.site-footer__link {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.5rem, 0.46rem + 0.19vw, 0.75rem);
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.site-footer__link > li {
+  margin: 0;
+}
+.site-footer__destination {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.5rem, 0.46rem + 0.19vw, 0.75rem);
+}
+.site-footer__destination-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(2.49rem, 1.92rem + 2.87vw, 6.31rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
