@@ -1,0 +1,52 @@
+.m-service-list {
+  --service-height: calc(clamp(2.99rem, 2.18rem + 4.07vw, 8.42rem) + 0.5rem);
+}
+.m-service-list__title {
+  font-size: clamp(1.44rem, 1.26rem + 0.92vw, 2.67rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.m-service-list__slider {
+  font-size: clamp(2.99rem, 2.18rem + 4.07vw, 8.42rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  color: var(--main-clr);
+}
+.m-service-list__slider--hover
+  .m-service-list__single-service:not(.m-service-list__single-service--hover) {
+  opacity: 0.2;
+}
+.m-service-list__single-service {
+  margin-top: -0.5rem;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s var(--transition-ease);
+}
+
+@media (hover: hover) {
+  .m-service-list__single-service {
+    pointer-events: all;
+  }
+}
+
+.m-service-list__single-service,
+.m-service-list__single-service ul > li {
+  height: var(--service-height);
+  margin: 0;
+}
+
+.m-service-list__single-service ul {
+  transform: translateY(calc(var(--service-height) * -1 * var(--active-child)));
+  transition: 0.6s transform var(--transition-ease-in-out);
+  list-style: none;
+  padding-left: 0;
+}
+
+.m-service-list__single-service--reset-animation ul {
+  transition: none;
+}
+.m-service-list__single-service ul > li span {
+  white-space: nowrap;
+}

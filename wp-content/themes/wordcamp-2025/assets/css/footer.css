@@ -1,0 +1,34 @@
+.site-footer {
+  color: var(--main-clr);
+}
+.site-footer__bg {
+  background: var(--main-text);
+}
+.site-footer__title {
+  font-size: clamp(1.73rem, 1.46rem + 1.37vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+.site-footer__btn {
+  --main-clr: #c7c2bb;
+  color: var(--main-clr);
+  padding-bottom: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  position: relative;
+  display: inline-flex;
+  margin-top: clamp(2rem, 1.85rem + 0.75vw, 3rem);
+  font-size: clamp(1.2rem, 1.08rem + 0.6vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+  background: #0000;
+}
+.site-footer__btn:before {
+  background-color: var(--main-clr);
+  bottom: 0.125rem;
+  content: "";
+  height: 0.0625rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
