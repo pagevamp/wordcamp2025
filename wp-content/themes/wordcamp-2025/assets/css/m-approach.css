@@ -1,0 +1,6 @@
+.m-approach__title {
+  font-size: clamp(2.49rem, 1.92rem + 2.87vw, 6.31rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}

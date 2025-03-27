@@ -1,0 +1,12 @@
+.m-company__title {
+  font-size: clamp(1.73rem, 1.46rem + 1.37vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+.m-company__figure > div {
+  aspect-ratio: 2.3333333333;
+}
+.m-company__wrap {
+  margin-top: clamp(4rem, 3.26rem + 3.75vw, 9rem);
+}
