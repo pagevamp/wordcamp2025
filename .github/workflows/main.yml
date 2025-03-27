@@ -23,18 +23,11 @@ jobs:
           echo "Secrets Branch: ${{ secrets.BRANCH }}"
 
       - run: git fetch --prune --unshallow
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18.12.1'
-
       - run: git config --global user.email "${{ github.actor }}@noreply.github.com"
       - run: git config --global user.name "${{ github.actor }}"
 
       - run: |
-          cd wp-content/themes/wordcamp2025
           git status
-          cd ../../../
           git add .
           git commit -m "Build"
 
@@ -44,4 +37,4 @@ jobs:
           WPENGINE_ENVIRONMENT_NAME: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
           WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
           WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
-          LOCAL_BRANCH: main
+          LOCAL_BRANCH:  ${{ secrets.BRANCH }}
