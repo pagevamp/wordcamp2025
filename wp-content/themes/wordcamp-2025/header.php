@@ -27,6 +27,10 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'wordcamp2025'); ?></a>
 
+		<div class="cursor">
+			<span class="cursor__close h3">×</span>
+		</div>
+
 		<header id="masthead" class="header">
 			<div class="header__overlay"></div>
 
@@ -34,7 +38,85 @@
 				<div class="l-row">
 					<div class="l-col-md-8 l-col-lg-6 l-col-xl-5">
 						<div class="header__container">
-							<div class="header__mega-menu"></div>
+							<div class="header__mega-menu">
+
+								<!-- Header Menu -->
+								<div class="header__mega-menu-navigation">
+									<ul class="header__mega-menu-list">
+										<li>
+											<a class="header__mega-menu-item" href="#" title="Projects" target="_self">
+												<span>Projects</span>
+												<span class="header__link-icon">→</span>
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item" href="#" title="Services" target="_self">
+												<span>Services</span>
+												<span class="header__link-icon">→</span>
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item" href="#" title="Approach" target="_self">
+												<span>Approach</span>
+												<span class="header__link-icon">→</span>
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item" href="#" title="Company" target="_self">
+												<span>Company</span>
+												<span class="header__link-icon">→</span>
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item" href="#" title="Philosophy" target="_self">
+												<span>Philosophy</span>
+												<span class="header__link-icon">→</span>
+											</a>
+										</li>
+									</ul>
+									<ul class="header__mega-menu-social">
+										<li>
+											<a class="header__mega-menu-item u-d-block" href="#" title="LinkedIn ↗︎" target="_blank">
+												LinkedIn ↗︎
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item u-d-block" href="#" title="Instagram ↗︎" target="_blank">
+												Instagram ↗︎
+											</a>
+										</li>
+										<li>
+											<a class="header__mega-menu-item u-d-block" href="#" title="Intro deck ↗︎" target="_blank">
+												Intro deck ↗︎
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<!-- Header Contact -->
+								<div class="header__mega-menu-contact u-h-100">
+									<ul class="header__mega-menu-contact-list">
+										<li>
+											<button class="header__contact-msg-btn header__mega-menu-contact-item">
+												<div>
+													<span>Drop us a message</span> <span>→</span>
+												</div>
+											</button>
+										</li>
+									</ul>
+
+									<div class="header__mega-menu-form">
+										<button class="c-btn header__back-btn">
+											<span>←</span>Back
+										</button>
+										<div class="u-pt-m p1">
+											<div class="header__contact-form">
+												<?php echo apply_shortcodes('[contact-form-7 id="36c998f" title="Contact Form"]') ?>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
 							<div class="header__menu">
 								<a class="header__logo" href="#" title="Home">

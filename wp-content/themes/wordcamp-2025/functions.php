@@ -141,6 +141,7 @@ function wordcamp2025_scripts() {
 	wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
 
 	wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '5.3.2', true );
+	wp_enqueue_script( 'header-js', get_template_directory_uri() . '/assets/js/header.js', array(), '5.3.2', true );
 	wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js', array(), '5.3.2', true );
 
 	wp_enqueue_style( 'wordcamp2025-style', get_stylesheet_uri(), array(), _S_VERSION );
