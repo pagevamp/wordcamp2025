@@ -24,7 +24,13 @@
   pointer-events: none;
   transition: opacity 0.4s var(--transition-ease);
 }
-
+.m-service-list__btn {
+  position: relative;
+}
+.m-service-list__btn .c-btn {
+  position: absolute;
+  z-index: -1;
+}
 @media (hover: hover) {
   .m-service-list__single-service {
     pointer-events: all;
