@@ -113,12 +113,12 @@ input:-webkit-autofill:hover {
 }
 
 button {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
   border: none;
   cursor: pointer;
   background-color: #0000;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 button:hover {
@@ -129,7 +129,9 @@ button:hover {
 [data-disabled] {
   pointer-events: none;
 }
-
+.u-h-100 {
+  height: 100% !important;
+}
 .u-py-2xl {
   padding-bottom: clamp(4rem, 3.7rem + 1.5vw, 6rem) !important;
   padding-top: clamp(4rem, 3.7rem + 1.5vw, 6rem) !important;
@@ -820,6 +822,9 @@ button:hover {
   .l-col-offset-xl-12 {
     margin-left: 100%;
   }
+}
+.u-d-flex {
+  display: flex !important;
 }
 .u-justify-start {
   justify-content: flex-start !important;

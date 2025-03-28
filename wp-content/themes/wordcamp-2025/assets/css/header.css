@@ -31,7 +31,6 @@
   background: #fff;
   border-radius: 0.25rem;
 }
-
 .header__menu {
   height: calc(
     clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem) * 2 +
@@ -73,10 +72,566 @@
 .header__menu-btn {
   color: var(--main-text);
 }
+.header__menu-btn:hover {
+  color: var(--main-clr);
+}
 .header__contact-btn {
   background-color: var(--main-text);
   border-radius: 1.75rem;
   color: var(--main-bg);
   padding-bottom: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
   padding-top: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+}
+.header__contact-btn:hover {
+  background: var(--main-clr);
+}
+
+.header__mega-menu {
+  -ms-overflow-style: none;
+  height: 0;
+  scrollbar-width: none;
+  transition: 0.8s height var(--transition-ease-in-out);
+  transition-delay: 0.02s;
+  overflow-y: auto;
+}
+.header__mega-menu > div {
+  padding: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+}
+
+/* 
+* Header Menu
+*=========================================
+*/
+.header__mega-menu-navigation ul {
+  border-bottom: 0.0625rem solid;
+  border-color: #0000;
+  overflow-y: hidden;
+  transition: 0.2s border-color var(--transition-ease);
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header__mega-menu-list {
+  font-size: clamp(2.49rem, 1.92rem + 2.87vw, 6.31rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  row-gap: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  padding-bottom: clamp(2rem, 1.85rem + 0.75vw, 3rem);
+}
+.header__mega-menu-social {
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+  row-gap: clamp(0.5rem, 0.46rem + 0.19vw, 0.75rem);
+  padding-bottom: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  padding-top: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+}
+.header__mega-menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+.header__mega-menu-navigation ul > li {
+  opacity: 0;
+  transform: translateY(200%);
+  transition-timing-function: var(--transition-ease) !important;
+  transition: opacity 0.8s, transform 0.8s;
+  margin: 0;
+}
+.header__mega-menu-navigation ul > li:hover {
+  color: var(--main-clr);
+}
+.header__mega-menu-navigation ul > li span:not(.header__link-icon) {
+  transition: 0.3s var(--transition-ease);
+  transition-property: transform, color;
+}
+.header__mega-menu-navigation ul > li .header__link-icon {
+  opacity: 0;
+}
+.header__mega-menu-navigation ul > li:hover span:not(.header__link-icon) {
+  transform: translateX(clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem));
+}
+.header__mega-menu-navigation ul > li:hover .header__link-icon {
+  opacity: 1;
+}
+.header--active .header {
+  pointer-events: all;
+}
+
+.header--active .header:before {
+  opacity: 0.95;
+}
+.header--active .header__mega-menu {
+  height: calc(
+    100dvh - clamp(1rem, -0.19rem + 6vw, 9rem) * 1 / 2 * 2 -
+      clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem) * 2 -
+      clamp(1.2rem, 1.08rem + 0.6vw, 2rem)
+  );
+  transition-delay: 0s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul {
+  border-color: #c7c2bb;
+  transition: 0.8s border-color 0.8s var(--transition-ease);
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:first-child {
+  transition-delay: 0.25s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(3) {
+  transition-delay: 0.35s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(7) {
+  transition-delay: 0.55s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(8) {
+  transition-delay: 0.6s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(9) {
+  transition-delay: 0.65s;
+}
+
+.header--navigation-active .header__mega-menu-navigation ul > li:nth-child(10) {
+  transition-delay: 0.7s;
+}
+
+.header--navigation-active .header__menu-btn:before {
+  content: attr(data-close-text);
+}
+
+.header--navigation-active .header__menu-btn span,
+.header--navigation-hide .header__mega-menu-navigation {
+  display: none;
+}
+
+/* 
+* Header Contact
+*=========================================
+*/
+.header__mega-menu-contact-list {
+  list-style: none;
+  padding-left: 0;
+  row-gap: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  padding-bottom: clamp(2rem, 1.85rem + 0.75vw, 3rem);
+  display: flex;
+  flex-direction: column;
+}
+.header__mega-menu-contact-list > li {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(80%);
+  transition-timing-function: var(--transition-ease) !important;
+  transition: opacity 0.8s, transform 0.8s;
+}
+.header__mega-menu-contact-list > li button {
+  aspect-ratio: 3;
+  border: 0.0625rem solid var(--main-text);
+  background-color: #0000;
+  column-gap: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  display: inline-flex;
+  padding: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  width: 100%;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+}
+.header__mega-menu-contact-list > li button > div {
+  font-size: clamp(1.73rem, 1.46rem + 1.37vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.header__mega-menu-contact-item span {
+  color: var(--main-text);
+  transition: 0.3s var(--transition-ease);
+  transition-property: transform;
+}
+.header__mega-menu-contact-item span:last-child {
+  display: none;
+}
+.header__mega-menu-contact-item:hover span:first-child {
+  transform: translateX(clamp(1rem, 0.93rem + 0.38vw, 1.5rem));
+}
+.header__mega-menu-contact-item:hover span:last-child {
+  display: block;
+}
+
+.header__mega-menu-form {
+  opacity: 0;
+  transition: 0.8s opacity var(--transition-ease);
+}
+.header__mega-menu-form > div {
+  transform: translateY(6.25rem);
+  transition: 0.8s transform var(--transition-ease);
+  padding-top: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.header__back-btn {
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+.header__back-btn:hover:before,
+.header__back-btn:hover:hover span:first-child {
+  transform: translateX(0);
+}
+
+.header--contact-active .header__contact-btn:before {
+  content: attr(data-close-text);
+}
+
+.header--contact-active .header__contact-btn span {
+  display: none;
+}
+
+.header--contact-hide .header__mega-menu-contact {
+  display: none !important;
+}
+
+.header--contact-list-active .header__mega-menu-contact-list > li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.header--contact-list-active .header__mega-menu-contact-list > li:first-child {
+  transition-delay: 0.25s;
+}
+
+.header--contact-list-active .header__mega-menu-contact-list > li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.header--contact-list-active .header__mega-menu-contact-list > li:nth-child(3) {
+  transition-delay: 0.35s;
+}
+
+.header--contact-list-active .header__mega-menu-contact-list > li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.header--contact-list-hide .header__mega-menu-contact-list {
+  display: none !important;
+}
+
+.header--contact-form-active .header__mega-menu-form {
+  opacity: 1;
+}
+
+.header--contact-form-active .header__mega-menu-form > div {
+  transform: translateY(0);
+}
+
+.header--contact-form-hide .header__mega-menu-form {
+  display: none !important;
+}
+
+/* 
+* Contact form
+* ==========================================
+*/
+
+.header__contact-form form {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+}
+
+.header__contact-form form span {
+  display: block;
+}
+
+.header__contact-form form input[type="email"],
+.header__contact-form form input[type="text"] {
+  border: 0;
+  border-bottom: 0.0625rem solid var(--main-text);
+  border-radius: 0;
+  font-family: Universal Sans, Haffer, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  padding: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem) 0
+    clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  width: 100%;
+}
+
+.header__contact-form form input[type="email"],
+.header__contact-form form input[type="email"]::placeholder,
+.header__contact-form form input[type="text"],
+.header__contact-form form input[type="text"]::placeholder {
+  color: var(--main-text);
+}
+
+.header__contact-form form input[type="email"]:focus,
+.header__contact-form form input[type="text"]:focus {
+  outline: medium none invert;
+  outline: initial;
+}
+
+.header__contact-form form button,
+.header__contact-form form input,
+.header__contact-form form textarea {
+  font-family: Universal Sans, Haffer, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.0131rem;
+  line-height: 1.1;
+}
+
+.header__contact-form form textarea {
+  border: 0.0625rem solid var(--main-text);
+  border-radius: 0.25rem;
+  height: 8.25rem;
+  padding: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem);
+  width: 100%;
+  margin-top: clamp(0.5rem, 0.46rem + 0.19vw, 0.75rem);
+}
+
+.header__contact-form form textarea:focus {
+  outline: medium none invert;
+  outline: initial;
+}
+
+.header__contact-form form button {
+  font-size: clamp(1.2rem, 1.08rem + 0.6vw, 2rem);
+  display: inline-flex;
+  column-gap: clamp(1.5rem, 1.39rem + 0.56vw, 2.25rem);
+  color: var(--main-clr);
+  overflow: hidden;
+  padding-bottom: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  position: relative;
+}
+.header__contact-form form button:before {
+  background-color: var(--main-clr);
+  bottom: 0.125rem;
+  content: "";
+  height: 0.0625rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+.header__contact-form form .wpcf7-radio {
+  border: 0.0625rem solid var(--main-text);
+  border-radius: 0.25rem;
+  display: flex;
+}
+
+.header__contact-form form .wpcf7-radio > span {
+  display: block;
+  flex: 1;
+  padding: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem) 0;
+  position: relative;
+}
+
+.header__contact-form
+  form
+  .wpcf7-radio
+  > span:not(.header__contact-form form .wpcf7-radio > span.last) {
+  border-right: 0.0625rem solid var(--main-text);
+}
+
+.header__contact-form form .wpcf7-radio .wpcf7-list-item {
+  margin: 0;
+}
+
+.header__contact-form form .wpcf7-radio .wpcf7-list-item-label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.header__contact-form form .wpcf7-radio input[type="radio"] {
+  visibility: hidden;
+}
+
+.header__contact-form
+  form
+  .wpcf7-radio
+  input[type="radio"]:checked
+  + .wpcf7-list-item-label {
+  background-color: var(--main-text);
+  color: #ede9e5;
+}
+
+.header__contact-form form .form-group {
+  position: relative;
+}
+
+.header__contact-form form .form-group label {
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem);
+  transition: 0.3s var(--transition-ease);
+}
+
+.header__contact-form form .wpcf7-form-control-wrap {
+  position: relative;
+}
+
+.header__contact-form
+  form
+  .wpcf7-form-control-wrap
+  input:placeholder-shown
+  + label {
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem);
+  transition: 0.3s var(--transition-ease);
+}
+
+.header__contact-form form .wpcf7-form-control-wrap input::placeholder {
+  color: #0000 !important;
+}
+
+.header__contact-form form .wpcf7-form-control-wrap input:invalid + label {
+  top: clamp(0.75rem, 0.69rem + 0.28vw, 1.13rem);
+}
+
+.header__contact-form form .wpcf7-form-control-wrap input:focus + label,
+.header__contact-form form .wpcf7-form-control-wrap input:not(:placeholder-shown):not(:focus) + label  {
+  font-size: clamp(0.69rem, 0.67rem + 0.11vw, 0.84rem);
+  top: 0;
+}
+
+.header__contact-form form > * {
+  transition: 0.3s opacity var(--transition-ease) !important;
+}
+
+.header__contact-form form .wpcf7-not-valid-tip {
+  color: var(--main-text);
+  font-size: clamp(0.69rem, 0.67rem + 0.11vw, 0.84rem);
+  font-weight: 300;
+  letter-spacing: 0.0081rem;
+  line-height: 1.1;
+  margin-top: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header__contact-form form .wpcf7-response-output {
+  border: #0000 !important;
+  font-size: clamp(2.07rem, 1.68rem + 2vw, 4.74rem);
+  font-weight: 300;
+  letter-spacing: -0.0737rem;
+  line-height: 1;
+  margin: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.header__contact-form
+  form[data-status="resetting"]
+  > :not(.wpcf7-response-output),
+.header__contact-form form[data-status="sent"] > :not(.wpcf7-response-output),
+.header__contact-form form[data-status="spam"] > :not(.wpcf7-response-output) {
+  opacity: 0;
+  pointer-events: all;
+}
+
+.header__contact-form form[data-status="sent"] .wpcf7-response-output,
+.header__contact-form form[data-status="spam"] .wpcf7-response-output {
+  animation: fade-in 0.3s 0.6s var(--transition-ease) forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.header__contact-form form > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.wpcf7-form.sent .wpcf7-response-output,
+.wpcf7-form.spam .wpcf7-response-output {
+  display: block !important;
+}
+
+/*
+* Cursor 
+* ==========================================
+*/
+.cursor {
+  background-color: var(--main-text);
+  border-radius: 50%;
+  color: var(--main-clr);
+  height: 5rem;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 5rem;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+.cursor > * {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cursor--close {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cursor__close {
+  font-size: clamp(1.73rem, 1.46rem + 1.37vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+.cursor--hide {
+  opacity: 0;
+  visibility: hidden;
 }

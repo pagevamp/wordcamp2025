@@ -18,7 +18,7 @@
 			<div class="l-row">
 				<div class="l-col-offset-lg-4 l-col-lg-8">
 					<h2 class="site-footer__title">We’re always interested in new ideas.</h2>
-					<button class="site-footer__btn">Get in touch</button>
+					<button class="site-footer__btn js-contact-btn">Get in touch</button>
 				</div>
 			</div>
 
