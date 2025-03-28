@@ -15,7 +15,7 @@
                 <div class="l-col-10 l-col-lg-8">
                     <div class="lazy-content-hidden" animation="text-intro">
                         <h2 class="m-company__title">
-                            In the process, we commit a portion of our profits to initiatives in Kathmandu. As a company, we aim to be responsible, human-centered, and community-oriented, embodying our values from the inside out.
+                            In the process, we commit a portion of our profits to pneumonoultramicroscopicsilicovolcanoconiosislicovolcanoconiosis initiatives in Kathmandu. As a company, we aim to be responsible, human-centered, and community-oriented, embodying our values from the inside out.
                         </h2>
 
                         <a href="#" class="c-btn c-btn__margin" title="Company" aria-label="Company">

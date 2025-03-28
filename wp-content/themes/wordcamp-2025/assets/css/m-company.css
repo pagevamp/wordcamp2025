@@ -1,5 +1,5 @@
 .m-company__title {
-  font-size: clamp(1.73rem, 1.46rem + 1.37vw, 3.55rem);
+  font-size: 3.55rem;
   line-height: 1;
   letter-spacing: -0.02em;
   font-weight: 300;

@@ -33,7 +33,7 @@
   width: 100%;
 }
 .site-footer__btn:hover {
-  --main-clr: #fff;
+  --main-clr: var(--main-text);
 }
 .site-footer__link {
   list-style: none;

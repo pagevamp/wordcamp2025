@@ -119,6 +119,8 @@
   font-weight: 300;
   row-gap: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
   padding-bottom: clamp(2rem, 1.85rem + 0.75vw, 3rem);
+  flex-direction: row !important;
+  justify-content: flex-end;
 }
 .header__mega-menu-social {
   font-size: clamp(1rem, 0.93rem + 0.38vw, 1.5rem);
@@ -530,7 +532,11 @@
 }
 
 .header__contact-form form .wpcf7-form-control-wrap input:focus + label,
-.header__contact-form form .wpcf7-form-control-wrap input:not(:placeholder-shown):not(:focus) + label  {
+.header__contact-form
+  form
+  .wpcf7-form-control-wrap
+  input:not(:placeholder-shown):not(:focus)
+  + label {
   font-size: clamp(0.69rem, 0.67rem + 0.11vw, 0.84rem);
   top: 0;
 }
