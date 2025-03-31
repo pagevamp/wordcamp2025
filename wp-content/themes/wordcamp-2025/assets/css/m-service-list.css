@@ -18,19 +18,16 @@
   .m-service-list__single-service:not(.m-service-list__single-service--hover) {
   opacity: 0.2;
 }
+.m-service-list__slider--hover .m-service-list__single-service.m-service-list__single-service--hover{
+  color: var(--main-bg);
+}
 .m-service-list__single-service {
   margin-top: -0.5rem;
   overflow: hidden;
   pointer-events: none;
   transition: opacity 0.4s var(--transition-ease);
 }
-.m-service-list__btn {
-  position: relative;
-}
-.m-service-list__btn .c-btn {
-  position: absolute;
-  z-index: -1;
-}
+
 @media (hover: hover) {
   .m-service-list__single-service {
     pointer-events: all;

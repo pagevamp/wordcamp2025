@@ -6,12 +6,10 @@
                     We provide a range of strategy, design, and technology solutions to companies &amp; organizations of all sizes.
                 </h2>
 
-                <div class="m-service-list__btn">
-                    <a href="#" class="c-btn c-btn__margin" title="Services" aria-label="Services">
-                        <span>Services</span>
-                        <span>→</span>
-                    </a>
-                </div>
+                <a href="#" class="c-btn c-btn__margin" title="Services" aria-label="Services">
+                    <span>Services</span>
+                    <span>→</span>
+                </a>
             </div>
             <div class="l-col-10 l-col-lg-6">
                 <div class="m-service-list__slider">

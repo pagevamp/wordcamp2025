@@ -2,7 +2,7 @@
   font-size: clamp(2.49rem, 1.92rem + 2.87vw, 6.31rem);
   font-weight: 300;
   letter-spacing: -0.02em;
-  line-height: 20%;
+  line-height: 50%;
 }
 .m-leadspace__video {
   overflow: hidden;

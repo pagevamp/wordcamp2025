@@ -4,3 +4,10 @@
   letter-spacing: -0.02em;
   font-weight: 300;
 }
+.m-approach-list__btn {
+  position: relative;
+}
+.m-approach-list__btn .c-btn {
+  position: absolute;
+  z-index: -1;
+}

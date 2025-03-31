@@ -6,10 +6,12 @@
                     To help small, impactful companies compete, we keep our approach–to design, development, and collaboration–flexible.
                 </h2>
 
-                <a href="#" class="c-btn c-btn__margin" title="Approach" aria-label="Approach">
-                    <span>Approach</span>
-                    <span>→</span>
-                </a>
+                <div class="m-approach-list__btn">
+                    <a href="#" class="c-btn c-btn__margin" title="Approach" aria-label="Approach">
+                        <span>Approach</span>
+                        <span>→</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
