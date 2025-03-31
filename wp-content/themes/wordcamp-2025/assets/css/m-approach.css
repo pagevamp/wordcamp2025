@@ -9,5 +9,5 @@
 }
 .m-approach-list__btn .c-btn {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }

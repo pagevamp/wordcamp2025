@@ -2,7 +2,7 @@
 $arg  = array(
     'post_type' => 'project',
     'orderby' => 'date',
-    'posts_per_page' => 1,
+    'posts_per_page' => 3,
     'order' => 'DESC',
     'post_status' => 'publish',
 );
@@ -30,9 +30,9 @@ if ($projects->have_posts()) {
                     $projects->the_post();
                     // Get image data
                     $thumbnail_id    = get_post_thumbnail_id();
-                    $thumbnail       = wp_get_attachment_image_src($thumbnail_id, 'medium');
-                    $srcset          = wp_get_attachment_image_srcset($thumbnail_id, 'medium');
-                    $sizes           = wp_get_attachment_image_sizes($thumbnail_id, 'medium');
+                    $thumbnail       = wp_get_attachment_image_src($thumbnail_id, 'large');
+                    $srcset          = wp_get_attachment_image_srcset($thumbnail_id, 'large');
+                    $sizes           = wp_get_attachment_image_sizes($thumbnail_id, 'large');
                     $image_title     = get_the_title($thumbnail_id);
                     $image_alt       = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
                 ?>
@@ -57,7 +57,7 @@ if ($projects->have_posts()) {
                             </div>
                             <div class="l-col-md-5 l-col-lg-4">
                                 <h3 class="m-project-list__single-card-title">
-                                    <?php echo esc_html(get_field('project_except') ?? "This is a dummy text of project");?>
+                                    <?php echo esc_html(get_field('project_excerpt') ?? "This is a dummy text of project");?>
                                     <span><?php echo get_the_title() ?> →</span>
                                 </h3>
                             </div>
