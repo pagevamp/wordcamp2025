@@ -853,6 +853,11 @@ button:hover {
     border-radius: 0.25rem;
   }
 }
+.c-figure > div span {
+  left: 0;
+  opacity: 0.2;
+  top: 0;
+}
 .c-image {
   height: 100%;
   object-fit: cover;
@@ -869,6 +874,9 @@ button:hover {
   left: 0;
   top: 0;
 }
+.c-image.js-lazy-media {
+  opacity: 0;
+}
 .c-image:not(.js-lazy-media) + span {
   opacity: 0;
   transition: 0.3s opacity var(--transition-ease);
@@ -878,7 +886,7 @@ button:hover {
 * Animation Css Starts
 * =======================================================
 */
-[animation="text-intro"] {
+.lazy-content-hidden {
   opacity: 0;
   transform: translateY(6.25rem);
 }

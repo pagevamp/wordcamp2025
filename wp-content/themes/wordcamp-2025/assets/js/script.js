@@ -1,7 +1,3 @@
-/**
- * Lazy Content Starts
- * ==========================================
- */
 lazyContent = (arr) => {
   const classes = {
     remove: "lazy-content-hidden",
@@ -32,10 +28,54 @@ lazyContent = (arr) => {
     }
   });
 };
-/**
- * Lazy Content Ends
- * ==========================================
- */
+
+lazyLoad = () => {
+  const imgList = document.querySelectorAll(".js-lazy-media");
+  if ("IntersectionObserver" in window) {
+    // Lazy loading for image
+    let lazyImageObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            let img = entry.target;
+            if (img.tagName != "VIDEO") {
+              img.src = img.src;
+              // After image fully loads, remove class.
+              img.addEventListener("load", () =>
+                img.classList.remove("js-lazy-media")
+              );
+            } else {
+              for (let source in img.children) {
+                let videoSource = img.children[source];
+                if (
+                  typeof videoSource.tagName === "string" &&
+                  videoSource.tagName === "SOURCE"
+                ) {
+                  videoSource.src = videoSource.src;
+                  img.addEventListener("loadeddata", () =>
+                    img.classList.remove("js-lazy-media")
+                  );
+                }
+              }
+
+              img.load();
+            }
+
+            lazyImageObserver.unobserve(img);
+          }
+        });
+      },
+      {
+        root: document.querySelector(".site-main"),
+        rootMargin: "500px",
+      }
+    );
+
+    imgList.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+};
 
 serviceList = () => {
   const select = document.querySelectorAll(".m-service-list");
@@ -103,10 +143,16 @@ serviceList = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  let video = document.getElementById("m-leadspace__video-id");
+  console.log(video);
+  if (video) {
+    video.pause();
+  }
   lazyContent([
     '[animation="text-intro"]',
     '[animation="img-intro"]',
     '[animation="fade-in"]',
   ]);
+  lazyLoad();
   serviceList();
 });
