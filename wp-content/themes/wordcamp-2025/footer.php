@@ -111,24 +111,30 @@
 				</div>
 			</div>
 
-			<?php // echo do_shortcode('[timezones]'); ?>
-			
 			<div class="l-row u-py-2xl u-py-lg-3xl">
 				<div class="l-col-offset-lg-4 l-col-lg-8">
-					<div class="site-footer__destination">
-						<div class="site-footer__destination-title">
-							<span>Kathmandu</span><span class="timezone" id="Asia/Kathmandu">13:15</span>
-						</div>
-						<div class="site-footer__destination-title">
-							<span>Milan</span><span class="timezone" id="Europe/Amsterdam">08:30</span>
-						</div>
-						<div class="site-footer__destination-title">
-							<span>Belfast</span><span class="timezone" id="Europe/Belfast">07:30</span>
-						</div>
-						<div class="site-footer__destination-title">
-							<span>New York</span><span class="timezone" id="America/New_York">03:30</span>
-						</div>
-					</div>
+					<?php
+					if (shortcode_exists('timezones')) {
+						echo do_shortcode('[timezones]');
+					} else {
+						echo '
+							<div class="site-footer__destination">
+								<div class="site-footer__destination-title">
+									<span>Kathmandu</span><span class="timezone">00:00</span>
+								</div>
+								<div class="site-footer__destination-title">
+									<span>Milan</span><span class="timezone">00:00</span>
+								</div>
+								<div class="site-footer__destination-title">
+									<span>Belfast</span><span class="timezone">00:00</span>
+								</div>
+								<div class="site-footer__destination-title">
+									<span>New York</span><span class="timezone">00:00</span>
+								</div>
+							</div>
+						';
+					}
+					?>
 				</div>
 			</div>
 		</div>
