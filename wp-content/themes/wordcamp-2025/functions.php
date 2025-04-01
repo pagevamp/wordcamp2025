@@ -189,6 +189,9 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Timezone html and script.
+ */
 function display_dynamic_timezones()
 {
 	ob_start();
