@@ -110,6 +110,9 @@
 					</ul>
 				</div>
 			</div>
+
+			<?php // echo do_shortcode('[timezones]'); ?>
+			
 			<div class="l-row u-py-2xl u-py-lg-3xl">
 				<div class="l-col-offset-lg-4 l-col-lg-8">
 					<div class="site-footer__destination">

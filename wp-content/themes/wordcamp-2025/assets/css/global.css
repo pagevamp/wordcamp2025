@@ -40,10 +40,7 @@ body {
   background: var(--main-bg);
   color: var(--main-text);
   letter-spacing: normal;
-}
-
-body.prevent-scrolling {
-  top: auto;
+  overflow-x: hidden;
 }
 
 * {
