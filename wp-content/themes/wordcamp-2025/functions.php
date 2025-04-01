@@ -191,24 +191,20 @@ if (defined('JETPACK__VERSION')) {
 
 function display_dynamic_timezones()
 {
-	ob_start(); // Start output buffering
+	ob_start();
 ?>
-	<div class="l-row u-py-2xl u-py-lg-3xl">
-		<div class="l-col-offset-lg-4 l-col-lg-8">
-			<div class="site-footer__destination">
-				<div class="site-footer__destination-title">
-					<span>Kathmandu</span><span class="timezone" id="Asia/Kathmandu"></span>
-				</div>
-				<div class="site-footer__destination-title">
-					<span>Milan</span><span class="timezone" id="Europe/Rome"></span>
-				</div>
-				<div class="site-footer__destination-title">
-					<span>Belfast</span><span class="timezone" id="Europe/London"></span>
-				</div>
-				<div class="site-footer__destination-title">
-					<span>New York</span><span class="timezone" id="America/New_York"></span>
-				</div>
-			</div>
+	<div class="site-footer__destination">
+		<div class="site-footer__destination-title">
+			<span>Kathmandu</span><span class="timezone" id="Asia/Kathmandu"></span>
+		</div>
+		<div class="site-footer__destination-title">
+			<span>Milan</span><span class="timezone" id="Europe/Rome"></span>
+		</div>
+		<div class="site-footer__destination-title">
+			<span>Belfast</span><span class="timezone" id="Europe/London"></span>
+		</div>
+		<div class="site-footer__destination-title">
+			<span>New York</span><span class="timezone" id="America/New_York"></span>
 		</div>
 	</div>
 
@@ -220,7 +216,6 @@ function display_dynamic_timezones()
 					timeZone,
 					hour: '2-digit',
 					minute: '2-digit',
-					second: '2-digit',
 					hour12: false
 				}).format(new Date());
 				element.textContent = timeString;
@@ -231,6 +226,5 @@ function display_dynamic_timezones()
 		updateTime();
 	</script>
 <?php
-	return ob_get_clean(); // Return the buffered content
+	return ob_get_clean();
 }
-// add_shortcode('timezones', 'display_dynamic_timezones');
