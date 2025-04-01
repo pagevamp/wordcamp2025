@@ -147,7 +147,6 @@ function wordcamp2025_scripts()
 
 	wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '5.3.2', true);
 	wp_enqueue_script('header-js', get_template_directory_uri() . '/assets/js/header.js', array(), '5.3.2', true);
-	wp_enqueue_script('footer-js', get_template_directory_uri() . '/assets/js/footer.js', array(), '5.3.2', true);
 	wp_enqueue_script('m-service-list-js', get_template_directory_uri() . '/assets/js/m-service-list.js', array(), '5.3.2', true);
 	wp_enqueue_script('script-js', get_template_directory_uri() . '/assets/js/script.js', array(), '5.3.2', true);
 
@@ -189,6 +188,9 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Timezone html and script.
+ */
 function display_dynamic_timezones()
 {
 	ob_start();
