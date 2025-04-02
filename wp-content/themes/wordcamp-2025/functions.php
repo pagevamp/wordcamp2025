@@ -230,3 +230,5 @@ function display_dynamic_timezones()
 <?php
 	return ob_get_clean();
 }
+
+add_shortcode( 'timezones', 'display_dynamic_timezones' );
