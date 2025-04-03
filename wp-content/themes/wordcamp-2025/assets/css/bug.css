@@ -1,0 +1,8 @@
+/* adding complexity to bugs - user need to override in respective css file*/
+
+.m-leadspace__title:not(:has(span)) {
+    line-height: 50% !important;
+  }
+  .m-approach:has(.c-btn:hover) .c-btn{
+    pointer-events: none;
+  }

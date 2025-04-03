@@ -1,3 +1,7 @@
+.m-approach {
+  position: relative;
+}
+
 .m-approach__title {
   font-size: clamp(2.49rem, 1.92rem + 2.87vw, 6.31rem);
   line-height: 1;
