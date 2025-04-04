@@ -75,7 +75,6 @@ wp-config.php
 .idea/
 
 .idea
-wp-content/uploads
 wp-content/upgrade
 wp-content/cache
 wp-content/languages
