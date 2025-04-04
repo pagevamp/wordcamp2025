@@ -13,7 +13,7 @@
         <div class="m-company__wrap">
             <div class="l-row u-justify-end">
                 <div class="l-col-10 l-col-lg-8">
-                    <div class="lazy-content-hidden" animation="">
+                    <div class="" animation="txt-intro">
                         <h2 class="m-company__title">
                             In the process, we commit a portion of our profits to initiatives in Kathmandu. As a company, we aim to be responsible, human-centered, and community-oriented, embodying our values from the inside out.
                         </h2>
