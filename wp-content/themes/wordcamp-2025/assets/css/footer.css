@@ -5,19 +5,19 @@
   background: var(--main-text);
 }
 .site-footer__title {
-  font-size: 1rem;
+  font-size: 3.55rem;
   line-height: 1;
   letter-spacing: -0.02em;
   font-weight: 300;
 }
 .site-footer__btn {
+  font-size: 2rem;
   --main-clr: #c7c2bb;
   color: var(--main-clr);
   padding-bottom: clamp(0.25rem, 0.23rem + 0.09vw, 0.38rem);
   position: relative;
   display: inline-flex;
   margin-top: clamp(2rem, 1.85rem + 0.75vw, 3rem);
-  font-size: 3rem;
   line-height: 1.1;
   letter-spacing: -0.01em;
   font-weight: 300;
@@ -52,6 +52,7 @@
 .site-footer__contact-info > li {
   position: relative;
   padding-left: 30px;
+  word-wrap: break-word;
 }
 .site-footer__contact-info > li svg {
   position: absolute;
