@@ -2,7 +2,6 @@
 $arg  = array(
     'post_type' => 'project',
     'orderby' => 'date',
-    'posts_per_page' => 1,
     'order' => 'DESC',
     'post_status' => 'publish',
 );
