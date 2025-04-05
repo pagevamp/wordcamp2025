@@ -23,7 +23,7 @@
 			</div>
 
 			<div class="l-row u-py-2xl u-py-lg-3xl">
-				<div class="l-col-6 l-col-offset-lg-4 l-col-lg-3">
+				<div class="l-col-6 l-col-offset-lg-2 l-col-lg-2">
 					<ul class="site-footer__link">
 						<li>
 							<a title="Home" aria-label="Home" type="link" tabindex="1" href="#">
@@ -47,7 +47,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="l-col-6 l-col-lg-3">
+				<div class="l-col-6 l-col-lg-2>
 					<ul class="site-footer__link">
 						<li>
 							<a title="Company" aria-label="Company" type="link" tabindex="1" href="#">
