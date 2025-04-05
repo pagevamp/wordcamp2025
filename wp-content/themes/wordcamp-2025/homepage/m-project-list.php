@@ -56,7 +56,7 @@ if ($projects->have_posts()) {
                             </div>
                             <div class="l-col-md-5 l-col-lg-4">
                                 <h3 class="m-project-list__single-card-title">
-                                    <?php echo esc_html(get_field('project_except') ?? "This is a dummy text of project");?>
+                                    <?php echo esc_html(get_post_meta(get_the_ID(),'project_excerpt', true));?>
                                     <span><?php echo get_the_title() ?> →</span>
                                 </h3>
                             </div>
